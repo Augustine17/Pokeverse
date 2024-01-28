@@ -1,0 +1,208 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .card {
+    margin: 20px;
+    width: 200px;
+    height: 275px;
+    perspective: 900px;
+    background-color: aliceblue;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+  }
+  
+  #cardContainer > .card:hover {
+    cursor: pointer;
+    transform: rotateY(180deg) rotateZ(180deg);
+  }
+  
+  .front, .back {
+    height: 100%;
+    width: 100%;
+    border-radius: 1.5rem;
+    position: absolute;
+    box-shadow: 0 0 10px 2px rgba(50, 50, 50, 2.5);
+    backface-visibility: hidden;
+    color: aliceblue;
+  }
+  
+  .front, .back {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px
+  }
+  
+  .back {
+    transform: rotateY(180deg) rotateZ(180deg);
+  }
+  
+  .back-heading, .front-heading {
+    font-size: 28px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+  }
+
+
+  #grass {
+    background: linear-gradient(109.6deg, rgb(0, 204, 130) 11.2%, rgb(58, 181, 46) 91.7%);
+}
+
+#bug {
+    background: radial-gradient(circle at 10% 20%, rgb(4, 159, 108) 0%, rgb(194, 254, 113) 90.1%);
+}
+
+#fire {
+    background: radial-gradient(circle at 10% 20%, rgb(255, 197, 61) 0%, rgb(255, 94, 7) 90%);
+}
+
+#water {
+    background: radial-gradient(circle at 10% 20%, rgb(255, 197, 61) 0%, rgb(255, 94, 7) 90%);
+}
+
+#ice {
+    background: radial-gradient(circle at 10% 20%, rgb(255, 197, 61) 0%, rgb(255, 94, 7) 90%);
+}
+
+#electric {
+    background: linear-gradient(109.6deg, rgb(255, 219, 47) 11.2%, rgb(244, 253, 0) 100.2%);
+}
+
+#psychic {
+    background: radial-gradient(849px at 0.9% 2.8%, rgb(255, 157, 255) 0%, rgb(255, 102, 142) 43.4%, rgb(255, 31, 56) 83.1%);
+}
+
+
+#fairy {
+    background: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+}
+
+#ghost {
+    background: linear-gradient(106.4deg, rgb(255, 104, 192) 11.1%, rgb(104, 84, 249) 81.3%);
+}
+
+#ground {
+    background: linear-gradient(135deg, rgb(255, 168, 168) 10%, rgb(252, 255, 0) 100%);
+}
+
+#poison {
+    background: linear-gradient(135deg, rgb(255, 168, 168) 10%, rgb(252, 255, 0) 100%);
+}
+
+#normal {
+    background: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+}
+
+#dragon {
+    background-color: goldenrod;
+}
+
+#fighting {
+    background-color: #d56723;
+}
+
+#rock {
+    background-color: #a38c21;
+}
+
+.back p{
+    padding: 0px 15px;
+}
+
+.back-heading{
+    font-size: 24px;
+}
+
+h1{
+    margin: 30px auto;
+    font-family: 'Grandstander', cursive;
+    text-align: center;
+    font-size: 70px;
+    margin-top: 45px;
+    margin-bottom: 20px;
+}
+
+.filterSection{
+    text-align: center;
+}
+
+#pokemon-types {
+    margin: 10px;
+}
+
+#searchDiv{
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 40px;
+}
+  
+
+.loading-wave {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  .loading-bar {
+    width: 20px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #3498db;
+    border-radius: 5px;
+    animation: loading-wave-animation 1s ease-in-out infinite;
+  }
+  
+  .loading-bar:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  
+  .loading-bar:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  
+  .loading-bar:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes loading-wave-animation {
+    0% {
+      height: 10px;
+    }
+  
+    50% {
+      height: 50px;
+    }
+  
+    100% {
+      height: 10px;
+    }
+  }
+
+  
+  #sub{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: black;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
